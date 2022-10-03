@@ -27,6 +27,23 @@ TEST(RecursiveFactorialTest, factorialUntil15) {
   EXPECT_EQ(recursiveFactorial(15), 1307674368000);
 }
 
+int gcd(int x, int y) {
+  if (x % y == 0) return y;
+  return gcd(y, x % y);
+}
+
+int threeGCD(int x, int y, int z) {
+  if (x % y == 0) return y;
+  return threeGCD(y, x % y);
+}
+
+TEST(CountDivisibleByK, threeGCD) {
+  EXPECT_EQ(6, threeGCD(12, 18));
+  EXPECT_EQ(2, threeGCD(30, 242));
+  EXPECT_EQ(21, threeGCD(1029, 1071));
+  EXPECT_EQ(636, threeGCD(3180, 1908));
+}
+
 }  // namespace takamrcpp::progression
 
 int main(int argc, char** argv) {
