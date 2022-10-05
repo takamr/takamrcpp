@@ -1,6 +1,6 @@
 # Project
 project(math)
-add_library(math src/gcd.cpp)
+add_library(math src/gcd.cpp src/fraction.cpp)
 include_directories(include)
 
 # Google Test
@@ -23,3 +23,10 @@ target_link_libraries(
         GTest::gtest_main
 )
 gtest_discover_tests(gcd_test)
+
+add_executable(fraction_test src/fraction_test.cpp src/fraction.cpp src/gcd.cpp)
+target_link_libraries(
+        fraction_test
+        GTest::gtest_main
+)
+gtest_discover_tests(fraction_test)
