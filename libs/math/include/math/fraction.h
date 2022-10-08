@@ -2,8 +2,8 @@
  * Copyright (c) 2022 Takamaru. All rights reserved.
  */
 
-#include <string>
 #include <math/gcd.h>
+#include <string>
 
 #ifndef TAKAMRCPP_LIBS_MATH_INCLUDE_MATH_FRACTION_H_
 #define TAKAMRCPP_LIBS_MATH_INCLUDE_MATH_FRACTION_H_

@@ -4,7 +4,7 @@
 
 namespace takamrcpp::progression {
 
-long recursiveFactorial(int n) {
+int64_t recursiveFactorial(int n) {
   if (n < 1) return 1;
   return recursiveFactorial(n - 1) * n;
 }
