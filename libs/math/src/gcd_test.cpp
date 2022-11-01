@@ -5,9 +5,6 @@
 #include <gtest/gtest.h>
 #include <math/gcd.h>
 
-#ifndef TAKAMRCPP_LIBS_MATH_SRC_GCD_TEST_CPP_
-#define TAKAMRCPP_LIBS_MATH_SRC_GCD_TEST_CPP_
-
 namespace takamrcpp::math {
 
 TEST(GCDTest, calculate2NumberGCD) {
@@ -25,8 +22,6 @@ TEST(ThreeGCDTest, calculate3NumberGCD) {
 }
 
 }  // namespace takamrcpp::math
-
-#endif  // TAKAMRCPP_LIBS_MATH_SRC_GCD_TEST_CPP_
 
 int main(int argc, char** argv) {
   ::testing::InitGoogleTest(&argc, argv);

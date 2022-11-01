@@ -1,6 +1,6 @@
 # Project
 project(math)
-add_library(math src/gcd.cpp src/fraction.cpp)
+add_library(math src/gcd.cpp src/fraction.cpp src/relative_error.cpp src/square_root.cpp)
 include_directories(include)
 
 # Google Test
@@ -30,3 +30,17 @@ target_link_libraries(
         GTest::gtest_main
 )
 gtest_discover_tests(fraction_test)
+
+add_executable(relative_error_test src/relative_error_test.cpp src/relative_error.cpp)
+target_link_libraries(
+        relative_error_test
+        GTest::gtest_main
+)
+gtest_discover_tests(relative_error_test)
+
+add_executable(square_root_test src/square_root_test.cpp src/square_root.cpp)
+target_link_libraries(
+        square_root_test
+        GTest::gtest_main
+)
+gtest_discover_tests(square_root_test)
